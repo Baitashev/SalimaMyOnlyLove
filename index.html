@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Для моей любимой</title>
+  <meta name="description" content="Живая открытка для самой любимой девушки" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <div class="aurora aurora-one"></div>
+  <div class="aurora aurora-two"></div>
+  <div id="heartsLayer" class="hearts-layer"></div>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero__content glass reveal">
+        <p class="eyebrow">личная открытка</p>
+        <h1>Для тебя, <span>Салима</span></h1>
+        <p class="hero__subtitle">
+          Я сделал эту маленькую страницу, чтобы ты в любой момент могла открыть её
+          и вспомнить: твой любимый рядом, думает о тебе и очень сильно тебя любит.
+        </p>
+        <button class="primary-btn" id="openCardBtn">Открыть открытку</button>
+      </div>
+      <div class="scroll-hint">листай ниже ✦</div>
+    </section>
+
+    <section class="section letter-section" id="letter">
+      <div class="section__heading reveal">
+        <p class="eyebrow">самое важное</p>
+        <h2>Письмо, которое можно перечитывать</h2>
+      </div>
+
+      <div class="letter glass reveal">
+        <div class="letter__heart">❤</div>
+        <p id="typedText" class="typed-text"></p>
+        <div class="letter__signature">Твой Бекназар</div>
+      </div>
+    </section>
+
+    <section class="section promise-section">
+      <div class="section__heading reveal">
+        <p class="eyebrow">мои обещания</p>
+        <h2>Когда тебе тяжело — просто помни</h2>
+      </div>
+
+      <div class="promise-grid">
+        <article class="promise-card glass reveal">
+          <span>01</span>
+          <h3>Ты не одна</h3>
+          <p>Даже если я не рядом физически, я всегда на твоей стороне — сердцем, мыслями и заботой.</p>
+        </article>
+        <article class="promise-card glass reveal">
+          <span>02</span>
+          <h3>Я верю в тебя</h3>
+          <p>Ты сильнее, чем иногда думаешь. Я вижу в тебе свет, нежность и огромную внутреннюю силу.</p>
+        </article>
+        <article class="promise-card glass reveal">
+          <span>03</span>
+          <h3>Я люблю тебя</h3>
+          <p>Не за что-то, не временами, не только в хорошие дни. Я люблю тебя настоящую — всегда.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section gallery-section" id="gallery">
+      <div class="section__heading reveal">
+        <p class="eyebrow">наши моменты</p>
+        <h2>Фотографии, в которых живёт тепло</h2>
+        <p class="section__text">Замени картинки в папке <b>images</b> на ваши фотографии — и открытка станет полностью вашей.</p>
+      </div>
+
+      <div id="galleryGrid" class="gallery-grid reveal"></div>
+    </section>
+
+    <section class="section envelope-section">
+      <div class="section__heading reveal">
+        <p class="eyebrow">секретик</p>
+        <h2>Нажми на конверт</h2>
+      </div>
+
+      <button class="envelope reveal" id="envelopeBtn" aria-label="Открыть секретное письмо">
+        <span class="envelope__flap"></span>
+        <span class="envelope__body"></span>
+        <span class="envelope__note">для тебя</span>
+      </button>
+
+      <div class="secret-message glass" id="secretMessage">
+        <h3>Моя любимая,</h3>
+        <p>
+          я хочу, чтобы эта открытка была твоим маленьким убежищем. Когда устанешь,
+          когда станет грустно или когда просто захочется тепла — открывай её и знай:
+          я рядом. Я очень сильно люблю тебя, берегу тебя в сердце и всегда хочу быть
+          тем человеком, рядом с которым тебе спокойно.
+        </p>
+      </div>
+    </section>
+
+    <section class="section support-section">
+      <div class="support-card glass reveal">
+        <p class="eyebrow">кнопка поддержки</p>
+        <h2>Когда настроение упало</h2>
+        <p id="supportText">
+          Нажми кнопку — и я напомню тебе то, что ты должна слышать каждый день.
+        </p>
+        <button class="secondary-btn" id="supportBtn">Мне нужна поддержка</button>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="photoModal" aria-hidden="true">
+    <button class="modal__close" id="closeModal" aria-label="Закрыть">×</button>
+    <img id="modalImage" alt="Фото из открытки" />
+    <p id="modalCaption"></p>
+  </div>
+
+  <footer class="footer">
+    <p>С любовью. Всегда рядом. Всегда твой.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
